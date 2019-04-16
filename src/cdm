@@ -198,7 +198,7 @@ case ${flaglist[$binindex]} in
         fi
 
         serverargs=(":${display}" "${serverargs[@]}" "vt$vt")
-	    if exec startx -- "${serverargs[@]}" > "$startxlog" 2>&1
+	    if exec startx $bin -- "${serverargs[@]}" > "$startxlog" 2>&1
         then
             exitnormal
         else
